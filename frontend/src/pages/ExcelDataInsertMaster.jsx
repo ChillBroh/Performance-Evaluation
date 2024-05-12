@@ -65,7 +65,9 @@ const ExcelDataInsertMaster = () => {
         data,
         approvedCount[data],
         totalCount[data],
-        ((approvedCount[data] / totalCount[data]) * 100).toFixed(2),
+        approvedCount[data]
+          ? ((approvedCount[data] / totalCount[data]) * 100).toFixed(2)
+          : "0%",
         "%"
       );
       console.log(
@@ -73,7 +75,9 @@ const ExcelDataInsertMaster = () => {
         data,
         notApprovedCount[data],
         totalCount[data],
-        ((notApprovedCount[data] / totalCount[data]) * 100).toFixed(2),
+        notApprovedCount[data]
+          ? ((notApprovedCount[data] / totalCount[data]) * 100).toFixed(2)
+          : "0%",
         "%"
       );
     });
