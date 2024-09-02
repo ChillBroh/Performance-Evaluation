@@ -138,7 +138,6 @@ const ExcelDataInsertMaster = () => {
           <table border={1}>
             <thead>
               <tr>
-                <th>No</th>
                 <th>Person Number</th>
                 <th>Person Name</th>
                 <th>Status</th>
@@ -152,7 +151,6 @@ const ExcelDataInsertMaster = () => {
                 diff.status === "Changed" ? (
                   Object.entries(diff.changes).map(([key, value], colIndex) => (
                     <tr key={`${rowIndex}-${colIndex}`}>
-                      <td>{rowIndex + 1}</td>
                       <td>{diff.personNumber}</td>
                       <td>{diff.personName}</td>
                       <td>{diff.status}</td>
